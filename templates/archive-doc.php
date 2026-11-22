@@ -1,0 +1,27 @@
+<!-- wp:template-part {"slug":"header","tagName":"header","area":"header"} /-->
+
+<!-- wp:group {"tagName":"main","style":{"spacing":{"margin":{"top":"0","bottom":"0"}}},"layout":{"type":"default"}} -->
+<main class="wp-block-group" style="margin-top:0;margin-bottom:0"><!-- wp:group {"align":"wide","className":"is-style-default","style":{"spacing":{"padding":{"top":"var:preset|spacing|x-large","bottom":"var:preset|spacing|x-large"}}},"backgroundColor":"border-light","layout":{"type":"constrained"}} -->
+<div class="wp-block-group alignwide is-style-default has-border-light-background-color has-background" style="padding-top:var(--wp--preset--spacing--x-large);padding-bottom:var(--wp--preset--spacing--x-large)"><!-- wp:heading {"textAlign":"center","level":1} -->
+<h1 class="wp-block-heading has-text-align-center">Knowledge Base</h1>
+<!-- /wp:heading -->
+
+<!-- wp:simple-docs/livesearch {"postTypes":["doc"],"placeholder":"Search in docs","style":{"border":{"width":"1px"}},"backgroundColor":"base","borderColor":"main-accent"} -->
+<div class="wp-block-simple-docs-livesearch" data-wp-interactive="simple-docs" data-wp-context="{&quot;isOpen&quot;:false,&quot;notFound&quot;:false,&quot;noLength&quot;:false,&quot;showModal&quot;:false,&quot;postTypes&quot;:[&quot;doc&quot;],&quot;results&quot;:[]}" data-wp-on-async-click="actions.closeModal" data-wp-on-async-document--click="actions.closeModal" data-wp-on-async-document--keydown="callbacks.keydown" data-wp-on-document--keydown="callbacks.ctrlkey" data-wp-class--modal="context.showModal"><form class="wp-block-simple-docs-livesearch__form has-base-background-color has-background has-border-color has-main-accent-border-color" style="border-width:1px" role="search"><label for="docsearch-input" data-wp-on--click="simple-docs::actions.showModal"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true"><path d="M13 5c-3.3 0-6 2.7-6 6 0 1.4.5 2.7 1.3 3.7l-3.8 3.8 1.1 1.1 3.8-3.8c1 .8 2.3 1.3 3.7 1.3 3.3 0 6-2.7 6-6S16.3 5 13 5zm0 10.5c-2.5 0-4.5-2-4.5-4.5s2-4.5 4.5-4.5 4.5 2 4.5 4.5-2 4.5-4.5 4.5z"></path></svg></label><input data-wp-on--click="simple-docs::actions.showModal" data-wp-on--input="simple-docs::actions.input" data-wp-on--keyup="simple-docs::actions.keyup" data-wp-on--focus="simple-docs::actions.focus" data-wp-on--focusout="simple-docs::actions.blur" data-wp-on--keydown="simple-docs::callbacks.noReturn" placeholder="Search in docs" type="search" autocomplete="off" id="docsearch-input"/><div class="docs-spinner" hidden data-wp-bind--hidden="!context.isLoading"><svg stroke="currentColor" stroke-opacity="0.5" viewBox="0 0 38 38"><g fill="none" fill-rule="evenodd" stroke-width="2" transform="translate(1 1)"><circle cx="18" cy="18" r="18" stroke-opacity="0.3"></circle><path d="M36 18c0-9.94-8.06-18-18-18"><animateTransform attributeName="transform" dur="1s" from="0 18 18" repeatCount="indefinite" to="360 18 18" type="rotate"></animateTransform></path></g></svg></div><button data-wp-bind--hidden="!context.showReset" data-wp-on--click="simple-docs::actions.clear" hidden><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true"><path d="m13.06 12 6.47-6.47-1.06-1.06L12 10.94 5.53 4.47 4.47 5.53 10.94 12l-6.47 6.47 1.06 1.06L12 13.06l6.47 6.47 1.06-1.06L13.06 12Z"></path></svg></button></form><div class="wp-block-search__results-wrapper" data-wp-bind--hidden="!state.isOpen" hidden><ul><template data-wp-each="context.results"><li><a data-wp-bind--href="context.item.url"><span data-wp-text="context.item.title"></span><small data-wp-text="context.item.subtype"></small></a></li></template></ul><div data-wp-bind--hidden="!context.notFound">No results found. Try again with different words?</div><div data-wp-bind--hidden="!context.noLength">Search must be at least 3 characters.</div></div></div>
+<!-- /wp:simple-docs/livesearch --></div>
+<!-- /wp:group -->
+
+<!-- wp:group {"align":"wide","layout":{"type":"constrained"}} -->
+<div class="wp-block-group alignwide"><!-- wp:terms-query {"termQuery":{"perPage":10,"taxonomy":"doc-category","order":"asc","orderBy":"name","include":[],"hideEmpty":false,"showNested":false,"inherit":false},"align":"wide"} -->
+<div class="wp-block-terms-query alignwide"><!-- wp:term-template {"layout":{"type":"grid","columnCount":3}} -->
+<!-- wp:group {"layout":{"type":"flex","flexWrap":"nowrap"}} -->
+<div class="wp-block-group"><!-- wp:term-name {"isLink":true} /-->
+
+<!-- wp:term-count /--></div>
+<!-- /wp:group -->
+<!-- /wp:term-template --></div>
+<!-- /wp:terms-query --></div>
+<!-- /wp:group --></main>
+<!-- /wp:group -->
+
+<!-- wp:template-part {"slug":"footer","tagName":"footer","area":"footer"} /-->

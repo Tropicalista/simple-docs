@@ -1,0 +1,45 @@
+{
+	"name": "polar",
+	"private": true,
+	"scripts": {
+		"format": "wp-scripts format",
+		"build": "npm run build:admin && npm run build:blocks",
+		"build:admin": "wp-build",
+		"build:blocks": "wp-scripts build --webpack-src-dir=blocks --output-path=build/blocks --webpack-copy-php",
+		"dev": "npm-run-all --parallel dev:admin dev:blocks",
+		"dev:admin": "wp-build --watch",
+		"dev:blocks": "wp-scripts start --webpack-src-dir=blocks --output-path=build/blocks --webpack-copy-php"
+	},
+	"wpPlugin": {
+		"name": "polar",
+		"scriptGlobal": "polarWp",
+		"packageNamespace": "polar",
+		"pages": [
+			"polar"
+		]
+	},
+	"devDependencies": {
+		"@eslint/js": "^10.0.1",
+		"@types/react": "^19.3.0",
+		"@wordpress/build": "^0.26.0",
+		"@wordpress/data": "^11.2.0",
+		"@wordpress/eslint-plugin": "^28.2.0",
+		"@wordpress/prettier-config": "^5.2.0",
+		"@wordpress/scripts": "^37.2.0",
+		"eslint": "^10.15.0",
+		"npm-run-all": "^4.1.5",
+		"prettier": "npm:wp-prettier@^3.9.6"
+	},
+	"dependencies": {
+		"@wordpress/admin-ui": "^3.2.0",
+		"@wordpress/components": "^43.0.0",
+		"@wordpress/core-data": "^9.2.0",
+		"@wordpress/dataviews": "^21.0.0",
+		"@wordpress/element": "^10.2.0",
+		"@wordpress/i18n": "^7.2.0",
+		"@wordpress/route": "^0.25.0",
+		"@wordpress/ui": "^0.25.0",
+		"clsx": "^2.1.1",
+		"react": "^19.3.1"
+	}
+}

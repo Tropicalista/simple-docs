@@ -1,0 +1,23 @@
+@use "sass:meta";
+
+@include meta.load-css("@wordpress/dataviews/build-style/style.css");
+
+.polar-taxonomy-page {
+	padding: 16px 0;
+
+	&__toolbar {
+		max-width: 360px;
+		margin-bottom: 16px;
+	}
+
+	&__form {
+		min-width: min(480px, 80vw);
+	}
+
+	&__form-actions {
+		display: flex;
+		justify-content: flex-end;
+		gap: 8px;
+	}
+}
+
